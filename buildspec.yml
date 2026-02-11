@@ -35,3 +35,5 @@ artifacts:
   files:
     - README.md
     - imagedefinitions.json
+    - codedeploy/*
+    - appspec.yml
