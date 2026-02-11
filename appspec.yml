@@ -1,5 +1,5 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
   - source: /
     destination: /home/ubuntu/web/
@@ -15,6 +15,9 @@ hooks:
   ApplicationStart:
     - location: codedeploy/start_server.sh
       runas: root
+      timeout: 300
+  BeforeInstall:
+    - location: codedeploy/docker_cleanup.sh
       timeout: 300
   BeforeAllowTraffic:
     - location: codedeploy/before_allow_traffic.sh
