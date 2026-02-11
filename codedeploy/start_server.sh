@@ -2,4 +2,4 @@
 
 
 
-docker compose -d up
+docker run --name my-nginx -p 80:80 -d nginx
